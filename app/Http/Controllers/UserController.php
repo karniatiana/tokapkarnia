@@ -47,6 +47,7 @@ class UserController extends Controller
         $data = User::where('id',$id)->first();
         return view('admin.pages.user.edit',['rc'=>$data]);
     }
+    
     public function update(Request $req)
     {
 
