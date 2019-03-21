@@ -15,7 +15,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<form method="POST" action="{{ route('admin.user.edit',['id=>$rc->']) }}">
+		<form method="POST" action="{{ route('admin.user.edit',['id'=>$rc->id]) }}">
 			{{ csrf_field() }}
 			<div class="card">
 				<div class="card-header">
@@ -37,7 +37,7 @@
 
 					<div class="form-group form-label-group">
 						<input type="email" name="email"
-						class="form-control {{ $errors->has('email')?'is-invalid':'' }}"
+						class="form-control {{ $errors->has('email')?'is-invalid':''}}"
 						value="{{ old('email',$rc->email) }}"
 						id="iEmail" placeholder="Email" required>
 						<label for="iEmail">Email</label>
